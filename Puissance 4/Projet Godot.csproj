@@ -5,4 +5,9 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>ProjetGodot</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ConnectFour.Core">
+      <HintPath>libs/External_Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
