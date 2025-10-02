@@ -1,0 +1,12 @@
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\External_Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\External_Core.AssemblyInfoInputs.cache
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\External_Core.AssemblyInfo.cs
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\External_Core.csproj.CoreCompileInputs.cache
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\External_Core.sourcelink.json
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\bin\Debug\net8.0\External_Core.deps.json
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\bin\Debug\net8.0\External_Core.dll
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\bin\Debug\net8.0\External_Core.pdb
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\External_Core.dll
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\refint\External_Core.dll
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\External_Core.pdb
+C:\Users\fireb\Desktop\Programmes\Projet-Godot-Mathis-Tristan\Core\External_Core\External_Core\obj\Debug\net8.0\ref\External_Core.dll

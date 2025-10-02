@@ -1,6 +1,4 @@
-using ConnectFour.Core;
-
-namespace ConnectFour.Logic
+namespace ConnectFour.Core
 {
     public static class Rules
     {
