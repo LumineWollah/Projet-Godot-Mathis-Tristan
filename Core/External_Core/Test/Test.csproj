@@ -21,4 +21,10 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="External_Core">
+        <HintPath>..\External_Core\bin\Debug\net8.0\External_Core.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
