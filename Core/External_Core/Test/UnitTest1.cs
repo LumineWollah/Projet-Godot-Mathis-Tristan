@@ -1,5 +1,4 @@
 using ConnectFour.Core;
-using ConnectFour.Logic;
 
 namespace ConnectFour.Tests
 {

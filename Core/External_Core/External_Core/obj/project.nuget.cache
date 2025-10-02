@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jmc4dXQLwP8=",
+  "dgSpecHash": "1hVYXiGtIgw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\External_Core\\External_Core.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\fireb\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.16\\microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
-    "C:\\Users\\fireb\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.16\\microsoft.windowsdesktop.app.ref.8.0.16.nupkg.sha512",
-    "C:\\Users\\fireb\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.16\\microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\External_Core\\External_Core.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

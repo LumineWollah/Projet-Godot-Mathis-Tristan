@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://dng30xax1jyh7"]
+[gd_scene load_steps=12 format=4 uid="uid://dng30xax1jyh7"]
+
+[ext_resource type="Script" uid="uid://coa6y5orvovf0" path="res://Scenes/RailCam.cs" id="1_y42mr"]
+[ext_resource type="Script" uid="uid://dnv1t1dlmxjro" path="res://Scenes/PathFollow3d.cs" id="2_pc01i"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_pc01i"]
 
@@ -42,6 +45,12 @@ shadow_mesh = SubResource("ArrayMesh_svgkj")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pc01i"]
 albedo_color = Color(0.14509805, 0.12156863, 1, 1)
 
+[sub_resource type="Curve3D" id="Curve3D_3thxw"]
+
+[sub_resource type="Environment" id="Environment_cuw5q"]
+
+[sub_resource type="Compositor" id="Compositor_c6vn4"]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="Plateau" type="MeshInstance3D" parent="."]
@@ -54,3 +63,31 @@ transform = Transform3D(-1.2706901e-07, 0, 0.25, 0, 2.5, 0, -2.907, 0, -1.092784
 mesh = SubResource("ArrayMesh_y42mr")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_pc01i")
+
+[node name="Rail_cam" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4411252, 0)
+curve = SubResource("Curve3D_3thxw")
+script = ExtResource("1_y42mr")
+metadata/Center = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Rail_cam" node_paths=PackedStringArray("Node3D")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09330487, 0)
+script = ExtResource("2_pc01i")
+MinZoom = 0.0
+MaxZoom = 5.0
+Node3D = NodePath("../../puissance_4")
+
+[node name="Anti_collision" type="SpringArm3D" parent="Rail_cam/PathFollow3D"]
+spring_length = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="Rail_cam/PathFollow3D/Anti_collision"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.4623275, 2.1458905, 0)
+environment = SubResource("Environment_cuw5q")
+compositor = SubResource("Compositor_c6vn4")
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.497055, 3.0915012, 0)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.410124, 3.0915012, 0)

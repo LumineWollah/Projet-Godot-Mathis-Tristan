@@ -982,20 +982,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fireb\\.nuget\\packages\\": {}
+    "C:\\Users\\Trist\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Test\\Test.csproj",
-      "packagesPath": "C:\\Users\\fireb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Test\\obj\\",
+      "projectPath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Test\\Test.csproj",
+      "packagesPath": "C:\\Users\\Trist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "C:\\Users\\fireb\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Trist\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1013,6 +1013,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1056,7 +1061,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Trist\\.dotnet\\sdk\\8.0.414/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -27,20 +27,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fireb\\.nuget\\packages\\": {}
+    "C:\\Users\\Trist\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Console\\Console.csproj",
+      "projectUniqueName": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Console\\Console.csproj",
       "projectName": "Console",
-      "projectPath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Console\\Console.csproj",
-      "packagesPath": "C:\\Users\\fireb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Console\\obj\\",
+      "projectPath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Console\\Console.csproj",
+      "packagesPath": "C:\\Users\\Trist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Console\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "C:\\Users\\fireb\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Trist\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -52,8 +52,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\External_Core\\External_Core.csproj": {
-              "projectPath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\External_Core\\External_Core.csproj"
+            "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\External_Core\\External_Core.csproj": {
+              "projectPath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\External_Core\\External_Core.csproj"
             }
           }
         }
@@ -66,7 +66,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       }
     },
     "frameworks": {
@@ -88,7 +88,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Trist\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
