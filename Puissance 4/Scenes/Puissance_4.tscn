@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dng30xax1jyh7"]
+[gd_scene load_steps=18 format=4 uid="uid://dng30xax1jyh7"]
 
 [ext_resource type="Script" uid="uid://b7iflrn5yoqxc" path="res://Scenes/GameHandler.cs" id="1_grf5q"]
 [ext_resource type="Script" uid="uid://coa6y5orvovf0" path="res://Scenes/RailCam.cs" id="1_y42mr"]
@@ -87,10 +87,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_snn0e")
 
-[node name="Node3D" type="Node3D" node_paths=PackedStringArray("Node3D", "FloatingDisc")]
+[sub_resource type="LabelSettings" id="LabelSettings_grf5q"]
+font_size = 36
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("Node3D", "FloatingDisc", "WinLabel")]
 script = ExtResource("1_grf5q")
 Node3D = NodePath("puissance_4")
 FloatingDisc = NodePath("Jeton")
+WinLabel = NodePath("UI/PanelContainer/VictoryLabel")
 
 [node name="Plateau" type="MeshInstance3D" parent="."]
 transform = Transform3D(-5, 0, 1.0033671e-06, 0, 0.043, 0, -7.54979e-07, 0, -6.645, 0, 0, 0)
@@ -136,3 +140,19 @@ transform = Transform3D(1.5298985e-08, -0.077, -5.284853e-08, -0.35, -3.365777e-
 mesh = SubResource("ArrayMesh_cuw5q")
 skeleton = NodePath("")
 script = ExtResource("4_3dc56")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="VictoryLabel" type="Label" parent="UI/PanelContainer"]
+layout_mode = 2
+text = "Who win ?"
+label_settings = SubResource("LabelSettings_grf5q")

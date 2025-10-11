@@ -26,6 +26,10 @@ public partial class GameHandler : Node3D
 
     //orientation du plateau (normale locale qui pointe vers la caméra)
     [Export] public Vector3 BoardNormalLocal = new Vector3(0, 0, -1); // normale (local au Node3D)
+    
+    //ui
+    [Export] public Label WinLabel;
+    private bool _gameOver = false;
 
     //etat
     private int _hoverCol;
@@ -76,10 +80,18 @@ public partial class GameHandler : Node3D
         _hoverCol = Board.Cols / 2;
 
         UpdateFloatingVisual();
+        
+        //on cache l'ui de victoire
+        if (WinLabel != null)
+        {
+            WinLabel.Visible = false;
+        }
     }
 
     public override void _Process(double delta)
     {
+        // bloquage des touches si la partie est terminée
+        if (_gameOver) return;
         //on récup les touches
         if (Input.IsActionJustPressed("col_1"))
         {
@@ -138,7 +150,24 @@ public partial class GameHandler : Node3D
         if (win)
         {
             GD.Print($"🎉 {_game.CurrentPlayer.Name} a gagné !");
-        } 
+            _gameOver = true;
+
+            // actualisation de l'ui
+            if (WinLabel != null)
+            {
+                WinLabel.Text = $"🎉 {_game.CurrentPlayer.Name} a gagné !";
+                WinLabel.Visible = true;
+
+                // petite fondue
+                var panel = WinLabel.GetParentOrNull<CanvasItem>();
+                if (panel != null)
+                {
+                    panel.Modulate = new Color(panel.Modulate.R, panel.Modulate.G, panel.Modulate.B, 0f);
+                    var t = GetTree().CreateTween().SetTrans(Tween.TransitionType.Sine).SetEase(Tween.EaseType.Out);
+                    t.TweenProperty(panel, "modulate:a", 1f, 0.35f);
+                }
+            }
+        }
         else 
         {
             // si pas de victoire on relance
