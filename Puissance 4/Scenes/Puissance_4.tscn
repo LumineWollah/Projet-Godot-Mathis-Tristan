@@ -1,7 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://dng30xax1jyh7"]
+[gd_scene load_steps=17 format=4 uid="uid://dng30xax1jyh7"]
 
+[ext_resource type="Script" uid="uid://b7iflrn5yoqxc" path="res://Scenes/GameHandler.cs" id="1_grf5q"]
 [ext_resource type="Script" uid="uid://coa6y5orvovf0" path="res://Scenes/RailCam.cs" id="1_y42mr"]
 [ext_resource type="Script" uid="uid://dnv1t1dlmxjro" path="res://Scenes/PathFollow3d.cs" id="2_pc01i"]
+[ext_resource type="Script" uid="uid://ck8kwki7l1yll" path="res://Scenes/Player_Jeton_Color.cs" id="4_3dc56"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_pc01i"]
 
@@ -85,7 +87,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_snn0e")
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("Node3D", "FloatingDisc")]
+script = ExtResource("1_grf5q")
+Node3D = NodePath("puissance_4")
+FloatingDisc = NodePath("Jeton")
 
 [node name="Plateau" type="MeshInstance3D" parent="."]
 transform = Transform3D(-5, 0, 1.0033671e-06, 0, 0.043, 0, -7.54979e-07, 0, -6.645, 0, 0, 0)
@@ -130,3 +135,4 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.
 transform = Transform3D(1.5298985e-08, -0.077, -5.284853e-08, -0.35, -3.365777e-09, 0, -2.3100827e-15, 1.16266765e-08, -0.35, 0.013789058, 5.901037, -0.0025133677)
 mesh = SubResource("ArrayMesh_cuw5q")
 skeleton = NodePath("")
+script = ExtResource("4_3dc56")

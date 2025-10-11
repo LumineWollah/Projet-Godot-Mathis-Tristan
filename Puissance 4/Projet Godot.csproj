@@ -6,8 +6,10 @@
     <RootNamespace>ProjetGodot</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ConnectFour.Core">
-      <HintPath>libs/External_Core.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+  <Reference Include="External_Core">
+    <HintPath>libs/External_Core.dll</HintPath>
+    <Private>true</Private>
+  </Reference>
+</ItemGroup>
+
 </Project>
