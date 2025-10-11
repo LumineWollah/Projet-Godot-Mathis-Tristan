@@ -90,14 +90,18 @@ public partial class GameHandler : Node3D
 
     public override void _Process(double delta)
     {
+        // pour relancer une partie
+        if (Input.IsActionJustPressed("Restart game"))
+        {
+            GetTree().ReloadCurrentScene();
+            return;
+        }
+
         // bloquage des touches si la partie est terminée
         if (_gameOver) return;
+        
         //on récup les touches
-        if (Input.IsActionJustPressed("col_1"))
-        {
-            _hoverCol = 0;
-            GD.Print("col_1");
-        }
+        if (Input.IsActionJustPressed("col_1")) _hoverCol = 0;
         if (Input.IsActionJustPressed("col_2")) _hoverCol = 1;
         if (Input.IsActionJustPressed("col_3")) _hoverCol = 2;
         if (Input.IsActionJustPressed("col_4")) _hoverCol = 3;
