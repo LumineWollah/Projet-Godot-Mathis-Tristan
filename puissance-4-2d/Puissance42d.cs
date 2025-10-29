@@ -4,21 +4,21 @@ using ConnectFour.Core;
 
 public partial class Puissance42d : Node2D
 {
-    // --- Références scène 2D ---
-    [Export] public Node2D BoardNode;         // noeud "repère" du plateau (peut être ce node)
-    [Export] public Sprite2D FloatingDisc;    // sprite fantôme de survol (affiché au-dessus de la colonne)
 
-    // settings pour bien caler les jetons (repère local au BoardNode)
-    [Export] public Vector2 CellOrigin = new Vector2(-84f, 83f);  // position locale de la case (row=0,col=0)
-    [Export] public Vector2 StepX = new Vector2(28f, 0f);         // vecteur entre colonnes (local)
-    [Export] public Vector2 StepY = new Vector2(0f, -32.5f);      // vecteur entre lignes (local)
-    [Export] public float HoverHeight = -50f;                     // décalage "au-dessus" de la rangée du haut (le long de Up)
-    [Export] public int   GhostZIndex = 100;                      // z-index du fantôme
+    [Export] public Node2D BoardNode;
+    [Export] public Sprite2D FloatingDisc;
+
+    // settings pour bien caler les jetons
+    [Export] public Vector2 CellOrigin = new Vector2(-84f, 83f);  // position d'origine en bas a gauche
+    [Export] public Vector2 StepX = new Vector2(28f, 0f);         // distance entre colonnes
+    [Export] public Vector2 StepY = new Vector2(0f, -32.5f);      // distance entre lignes
+    [Export] public float HoverHeight = -50f;                     // décalage au dessus du plateau
+    [Export] public int   GhostZIndex = 100;                      // z-index du jeton flottant
     [Export] public int   DiscZIndex  = 10;                       // z-index des jetons posés
 
     // setup des couleurs des joueurs
-    [Export] public Color Player1Color = new Color(0.9f, 0.1f, 0.1f); // P1 (rouge)
-    [Export] public Color Player2Color = new Color(1.0f, 0.9f, 0.1f); // P2 (jaune)
+    [Export] public Color Player1Color = new Color(0.9f, 0.1f, 0.1f);
+    [Export] public Color Player2Color = new Color(1.0f, 0.9f, 0.1f);
 
     // animations des jetons
     [Export] public float DropTime = 0.25f;
@@ -46,16 +46,16 @@ public partial class Puissance42d : Node2D
         var p2 = new Player("P2", 'O');
         _game = new Game(p1, p2);
 
-        // configuration du jeton fantôme (sprite existant dans la scène)
+        // configuration du jeton fantôme
         if (FloatingDisc != null)
         {
             _floating = FloatingDisc;
             _floating.Visible = true;
-            _floating.SelfModulate = new Color(1f, 1f, 1f); // léger alpha pour effet "ghost"
+            _floating.SelfModulate = new Color(1f, 1f, 1f);
             _floating.ZIndex = GhostZIndex;
         }
 
-        // on centre la colonne de survol au démarrage (confort visuel)
+        // on centre la colonne de survol au démarrage
         _hoverCol = Board.Cols / 2;
 
         UpdateFloatingVisual();
@@ -159,43 +159,43 @@ public partial class Puissance42d : Node2D
         }
     }
 
-    private void SpawnAndPlaceDisc(int col, int row, Color color) // création + anim/TP du jeton posé
+    private void SpawnAndPlaceDisc(int col, int row, Color color)
     {
-        // on duplique le sprite du jeton flottant (mêmes dimensions/texture)
+        // on duplique le sprite du jeton flottant
         var discSprite = GetDiscSprite(_floating);
         if (discSprite == null) return;
 
         var disc = (Sprite2D)discSprite.Duplicate();
         disc.Name = $"Disc_{col}_{row}";
         disc.Visible = true;
-        disc.SelfModulate = Colors.White; // reset sécurité
-        disc.Modulate = color;            // couleur du joueur
+        disc.SelfModulate = Colors.White;
+        disc.Modulate = color;
         disc.ZIndex = DiscZIndex;
 
-        // ✅ copie uniquement l’échelle du jeton flottant
+        //copie uniquement l’échelle du jeton flottant
         disc.Scale = _floating.Scale;
 
         var parent = _floating.GetParent();
         parent.AddChild(disc);
         disc.GlobalScale = _floating.GlobalScale;
-        // positions calculées en monde (en utilisant le repère du BoardNode)
+        // positions calculées en monde
         var from = GridTopWorld(col);       // pile au-dessus de la colonne
         var to   = GridCellWorld(col, row); // centre exact de la case
 
         if (!AnimateDrop)
         {
-            // TP direct (pas de tween)
+            // TP direct
             disc.GlobalPosition = to;
             return;
         }
 
-        // animation verticale uniquement (on part du top de colonne)
+        // animation verticale uniquement
         disc.GlobalPosition = from;
 
-        var up = GetUpWorld(); // direction "vers le haut" du plateau (normale à StepY)
+        var up = GetUpWorld();
 
         var tween = GetTree().CreateTween()
-            .SetTrans(Tween.TransitionType.Sine) // ease gravité plus crédible
+            .SetTrans(Tween.TransitionType.Sine)
             .SetEase(Tween.EaseType.In);
 
         tween.TweenProperty(disc, "global_position", to, DropTime);
@@ -213,12 +213,8 @@ public partial class Puissance42d : Node2D
     {
         // calibration du plateau de jeu
         var t = BoardNode != null ? BoardNode.GlobalTransform : GlobalTransform;
-
-        // position locale (origine + pas * indices)
+        // position locale
         Vector2 local = CellOrigin + StepX * col + StepY * row;
-
-        // ✅ Formule robuste Godot 4: base (rotation/scale) + translation
-        // (équiv. à Xform mais sans l'appel direct qui peut planter en C#)
         return t.Origin + t.BasisXform(local);
     }
 
@@ -233,20 +229,15 @@ public partial class Puissance42d : Node2D
         return GridToWorld(col, row);
     }
 
-    private Vector2 GetUpWorld() // direction "vers le haut" du plateau (à partir de StepY)
+    private Vector2 GetUpWorld()
     {
         var t = BoardNode != null ? BoardNode.GlobalTransform : GlobalTransform;
-
-        // on prend StepY (local), on le passe en monde via la base (sans translation), puis on normalise
         var up = t.BasisXform(StepY).Normalized();
         return up;
     }
-
-    // --- Couleurs / helpers ---
-
+    
     private void SetDiscColor(Sprite2D disc, Color color) // logique pour changer la couleur du jeton
     {
-        // en 2D, on utilise Modulate (teinte du sprite)
         disc.Modulate = color;
     }
 
@@ -258,7 +249,7 @@ public partial class Puissance42d : Node2D
 
     private Sprite2D GetDiscSprite(Node from)
     {
-        // petit helper pour récupérer le sprite du jeton (root ou enfant)
+        // petit helper pour récupérer le sprite du jeton
         if (from is Sprite2D s) return s;
         return from.GetNodeOrNull<Sprite2D>("Sprite2D");
     }

@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "kD/vdZorAqs=",
+  "dgSpecHash": "k2OZ6pnqFuY=",
   "success": true,
   "projectFilePath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\puissance-4-2d\\Puissance4_2D.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Trist\\.nuget\\packages\\godot.sourcegenerators\\4.5.0\\godot.sourcegenerators.4.5.0.nupkg.sha512",
     "C:\\Users\\Trist\\.nuget\\packages\\godotsharp\\4.5.0\\godotsharp.4.5.0.nupkg.sha512",
-    "C:\\Users\\Trist\\.nuget\\packages\\godotsharpeditor\\4.5.0\\godotsharpeditor.4.5.0.nupkg.sha512"
+    "C:\\Users\\Trist\\.nuget\\packages\\godotsharpeditor\\4.5.0\\godotsharpeditor.4.5.0.nupkg.sha512",
+    "C:\\Users\\Trist\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Trist\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Trist\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
   ],
   "logs": []
 }

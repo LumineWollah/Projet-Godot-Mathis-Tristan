@@ -16,3 +16,5 @@ build_property.RootNamespace = Puissance4_2D
 build_property.ProjectDir = C:\Users\Trist\Desktop\Projet-Godot-Mathis-Tristan\puissance-4-2d\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
