@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Puissance4_2D")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67e74a98b7d291d566954fc22289349c463610ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eec9ce9fef534e07f53c9097f08ab1b67c762995")]
 [assembly: System.Reflection.AssemblyProductAttribute("Puissance4_2D")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Puissance4_2D")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

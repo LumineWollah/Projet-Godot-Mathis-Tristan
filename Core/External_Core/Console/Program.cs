@@ -25,6 +25,7 @@ class Program
                 {
                     renderer.Draw();
                     Console.WriteLine($"{game.CurrentPlayer.Name} wins!");
+                    System.Threading.Thread.Sleep(3000);
                     running = false;
                 }
                 else

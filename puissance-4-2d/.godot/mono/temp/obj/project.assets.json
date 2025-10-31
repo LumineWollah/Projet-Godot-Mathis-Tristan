@@ -20,19 +20,24 @@
             "related": ".xml"
           }
         }
-      },
-      "GodotSharpEditor/4.5.0": {
+      }
+    },
+    "net8.0/win-x64": {
+      "Godot.SourceGenerators/4.5.0": {
         "type": "package",
-        "dependencies": {
-          "GodotSharp": "4.5.0"
-        },
+        "build": {
+          "build/Godot.SourceGenerators.props": {}
+        }
+      },
+      "GodotSharp/4.5.0": {
+        "type": "package",
         "compile": {
-          "lib/net8.0/GodotSharpEditor.dll": {
+          "lib/net8.0/GodotSharp.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/GodotSharpEditor.dll": {
+          "lib/net8.0/GodotSharp.dll": {
             "related": ".xml"
           }
         }
@@ -65,43 +70,28 @@
         "lib/net8.0/GodotSharp.dll",
         "lib/net8.0/GodotSharp.xml"
       ]
-    },
-    "GodotSharpEditor/4.5.0": {
-      "sha512": "nKDwV/8xgiB7K99GotuPmG0LEsf1Rwf51MmvA6qB1Qu57Ylq+Awqn1Wtd9/gH7qvk/E63jAPE/oDKIa5ulSdig==",
-      "type": "package",
-      "path": "godotsharpeditor/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "godotsharpeditor.4.5.0.nupkg.sha512",
-        "godotsharpeditor.nuspec",
-        "lib/net8.0/GodotSharpEditor.dll",
-        "lib/net8.0/GodotSharpEditor.xml"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Godot.SourceGenerators >= 4.5.0",
-      "GodotSharp >= 4.5.0",
-      "GodotSharpEditor >= 4.5.0"
+      "GodotSharp >= 4.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Trist\\.nuget\\packages\\": {}
+    "C:\\Users\\fireb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\puissance-4-2d\\Puissance4_2D.csproj",
+      "projectUniqueName": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\puissance-4-2d\\Puissance4_2D.csproj",
       "projectName": "Puissance4_2D",
-      "projectPath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\puissance-4-2d\\Puissance4_2D.csproj",
-      "packagesPath": "C:\\Users\\Trist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Trist\\Desktop\\Projet-Godot-Mathis-Tristan\\puissance-4-2d\\.godot\\mono\\temp\\obj\\",
+      "projectPath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\puissance-4-2d\\Puissance4_2D.csproj",
+      "packagesPath": "C:\\Users\\fireb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\puissance-4-2d\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "C:\\Users\\Trist\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\fireb\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -123,8 +113,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      }
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -136,11 +127,6 @@
             "autoReferenced": true
           },
           "GodotSharp": {
-            "target": "Package",
-            "version": "[4.5.0, )",
-            "autoReferenced": true
-          },
-          "GodotSharpEditor": {
             "target": "Package",
             "version": "[4.5.0, )",
             "autoReferenced": true
@@ -160,15 +146,27 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[8.0.16, 8.0.16]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[8.0.16, 8.0.16]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[8.0.16, 8.0.16]"
           }
         ],
         "frameworkReferences": {
@@ -176,7 +174,12 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Trist\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }
