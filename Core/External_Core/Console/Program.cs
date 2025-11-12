@@ -12,6 +12,7 @@ class Program
 
         var renderer = new ConsoleRenderer(game.Board);
         var input = new InputHandler();
+        var record = new Recorder();
 
         bool running = true;
         while (running)
@@ -21,6 +22,7 @@ class Program
 
             if (game.Board.PlaceDisc(col, game.CurrentPlayer.Disc, out int row))
             {
+                record.RecordState(game.Board, col, game.CurrentPlayer);
                 if (Rules.CheckWin(game.Board, row, col))
                 {
                     renderer.Draw();
