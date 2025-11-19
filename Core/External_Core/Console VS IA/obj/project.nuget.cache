@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "xV0VBgl49Qo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fireb\\Desktop\\Programmes\\Projet-Godot-Mathis-Tristan\\Core\\External_Core\\Console VS IA\\Console.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fireb\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.11\\microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\fireb\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.11\\microsoft.windowsdesktop.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\fireb\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.11\\microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\fireb\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.11\\microsoft.netcore.app.host.win-x64.9.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
