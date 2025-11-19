@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v9.0": {
       "Console/1.0.0": {
         "dependencies": {
-          "External_Core": "1.0.0",
           "External_Core.Reference": "1.0.0.0"
         },
         "runtime": {

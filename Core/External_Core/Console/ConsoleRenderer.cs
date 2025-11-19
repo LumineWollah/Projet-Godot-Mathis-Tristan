@@ -10,7 +10,7 @@ public class ConsoleRenderer
 
     public void Draw()
     {
-        Console.Clear();
+        //Console.Clear();
         for (int r = 0; r < Board.Rows; r++)
         {
             for (int c = 0; c < Board.Cols; c++)

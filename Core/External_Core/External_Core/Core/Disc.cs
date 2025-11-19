@@ -8,5 +8,10 @@ namespace ConnectFour.Core
         {
             Symbol = symbol;
         }
+
+        public char GetSymbol()
+        {
+            return Symbol;
+        }
     }
 }
